@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reports</title>
+  <link rel="stylesheet" href="main2.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="report-header">
+      <button class="back-button" onclick="location.href='index.html'">←</button>
+      <h2>Reports</h2>
+    </header>
+    <div class="report-month-nav">
+      <button id="report-prev-btn" class="month-nav-btn">‹</button>
+      <span id="report-month-label"></span>
+      <button id="report-next-btn" class="month-nav-btn">›</button>
+    </div>
+    <div class="report-tabs">
+      <button class="report-tab-btn active" data-type="expense">Expense</button>
+      <button class="report-tab-btn" data-type="income">Income</button>
+    </div>
+    <div id="report-summary"></div>
+    <canvas id="report-chart" width="400" height="400"></canvas>
+    <ul id="report-list"></ul>
+  </div>
+  <script src="report.js"></script>
+</body>
+</html>

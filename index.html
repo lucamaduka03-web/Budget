@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="balance-container active">
+          <div class="wallet-header-row">
+            <div class="wallet-date" id="wallet-date">
+              <button id="previous-btn"><</button>
+              <span>Sep 2025</span>
+              <button id="next-btn">></button>
+            </div>
+            <h1>My Wallet</h1>
+            <div class="wallet-report">
+              <button class="report-tab" onclick="location.href='report.html'">Reports</button>
+            </div>
+          </div>
+          <h2>Total Balance</h2>
+          <h1 id="balance">$0.00</h1>
+
+          <div class="summary">
+            <div class="expense">
+              <h3>Expense</h3>
+              <p id="expense-total">$0.00</p>
+            </div>
+            <div class="income">
+              <h3>Income</h3>
+              <p id="income-total">$0.00</p>
+            </div>
+          </div>
+          <button
+            onclick="location.href='index1.html'"
+            id="add-transaction-btn"
+          >
+            +
+          </button>
+        </div>
+      </header>
+
+      <div class="transaction-container">
+        <h4>Transactions</h4>
+        <ul id="transaction-list">
+          <!---Transactions will be added here dynamically--->
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

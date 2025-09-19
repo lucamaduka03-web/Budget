@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Transaction</title>
+    <link rel="stylesheet" href="main1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="new-transaction-form">
+        <div class="header">
+          <button class="back-button cancel-button" type="button">
+            ←
+          </button>
+          <h2>New Transaction</h2>
+        </div>
+
+        <div class="transaction-type">
+          <button type="button" class="expense-tab active">Expense</button>
+          <button type="button" class="income-tab">Income</button>
+        </div>
+
+        <!-- Expense Form -->
+        <form id="expense-form" class="transaction-form">
+          <div class="form-group">
+            <label for="expense-input-amount">Amount</label>
+            <input
+              type="number"
+              id="expense-input-amount"
+              placeholder="Enter amount"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="expense-category">Category</label>
+            <select id="expense-category">
+              <option value="food & drink">Food & Drink</option>
+              <option value="shopping">Shopping</option>
+              <option value="airtime">Airtime</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="transport">Transport</option>
+              <option value="education">Education</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="housing">Housing</option>
+              <option value="car">Car</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="expense-date">Date</label>
+            <input type="date" id="expense-date"/>
+          </div>
+          <div class="form-group">
+            <label for="expense-note">Note</label>
+            <textarea
+              id="expense-note"
+              placeholder="Click to fill in the remarks"
+            ></textarea>
+          </div>
+          <div class="button-group">
+            <button type="button" class="cancel-button">CANCEL</button>
+            <button type="submit" class="save-button">SAVE</button>
+          </div>
+        </form>
+
+        <!-- Income Form -->
+        <form id="income-form" class="transaction-form hidden">
+          <div class="form-group">
+            <label for="income-input-amount">Amount</label>
+            <input
+              type="number"
+              id="income-input-amount"
+              placeholder="Enter amount"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="income-category">Category</label>
+            <select id="income-category">
+              <option value="salary">Salary</option>
+              <option value="freelance">Freelance</option>
+              <option value="gift">Gift</option>
+              <option value="allowance">Allowance</option>
+              <option value="investment">Investment</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="income-date">Date</label>
+            <input type="date" id="income-date"/>
+          </div>
+          <div class="form-group">
+            <label for="income-note">Note</label>
+            <textarea
+              id="income-note"
+              placeholder="Click to fill in the remarks"
+            ></textarea>
+          </div>
+          <div class="button-group">
+            <button type="button" class="cancel-button">CANCEL</button>
+            <button type="submit" class="save-button">SAVE</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
